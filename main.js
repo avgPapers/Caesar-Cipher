@@ -9,19 +9,23 @@ function enkrip(){
         let convertNum = text.charCodeAt(i);
         messages.push(convertNum);
     }
-    
-    // Operasi matematika dari Caesar Cipher dan disimpan ke dalam array baru
-    let enkripsi = [];
+
+    // Validasi input key agar tidak melebihi 26 & operasi matematika Caesar Cipher
     for (i=0;i<messages.length;i++){
-        let en = (messages[i] + key)
-        enkripsi.push(en)
+        if (messages[i] >= 65 && messages[i] <= 90){
+            messages[i] = ((messages[i] - 65 + key) % 26) + 65;
+        }else if (messages[i] >= 97 && messages[i] <= 122){
+            messages[i] = ((messages[i] - 97 + key) % 26) + 97;
+        }else{
+            messages[i] = messages[i];
+        }
     }
-    
+
     // Mengubah kode ASCII yang sudah di enkripsi dan disimpan ke dalam variabel string
     let convertChar = [];
     let outputEnkrip ='';
-    for (i=0;i<enkripsi.length;i++){
-        let convertC = String.fromCharCode(enkripsi[i]);
+    for (i=0;i<messages.length;i++){
+        let convertC = String.fromCharCode(messages[i]);
         convertChar.push(convertC);
         outputEnkrip = convertChar.join('');
     }
@@ -44,18 +48,22 @@ function deskrip(){
         messages.push(convertNum);
     }
     
-    // Operasi matematika dari Caesar Cipher dan disimpan ke dalam array baru
-    let deskripsi = [];
+    // Validasi input key agar tidak melebihi 26 & operasi matematika Caesar Cipher dibalikkan
     for (i=0;i<messages.length;i++){
-        let de = (messages[i] - key)
-        deskripsi.push(de)
+        if (messages[i] >= 65 && messages[i] <= 90){
+            messages[i] = ((messages[i] - 65 - key + 26) % 26) + 65;
+        }else if (messages[i] >= 97 && messages[i] <= 122){
+            messages[i] = ((messages[i] - 97 - key + 26) % 26) + 97;
+        }else{
+            messages[i] = messages[i];
+        }
     }
     
-    // Mengubah kode ASCII yang sudah di enkripsi dan disimpan ke dalam variabel string
+    // Mengubah kode ASCII yang sudah di deskripsi dan disimpan ke dalam variabel string
     let convertChar = [];
     let outputDeskrip ='';
-    for (i=0;i<deskripsi.length;i++){
-        let converC = String.fromCharCode(deskripsi[i]);
+    for (i=0;i<messages.length;i++){
+        let converC = String.fromCharCode(messages[i]);
         convertChar.push(converC);
         outputDeskrip = convertChar.join('');
     }
