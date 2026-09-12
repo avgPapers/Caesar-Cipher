@@ -39,7 +39,7 @@ function enkrip(){
 function deskrip(){
     // Mengambil data dari input box 3 & 4
     text = document.getElementById('input3').value;
-    key = Number(document.getElementById('input4').value);
+    key = Number(document.getElementById('input4').value) % 26;
     
     // Mengubah data karakter dari input 3 menjadi kode ASCII dan disimpan dalam array
     let messages = [];
