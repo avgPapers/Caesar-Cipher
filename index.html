@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Caesar Chiper</h1>
+    <div class="card">
+        <h1>Caesar Chiper</h1>
 
-    <input type="text" id="input1" placeholder="Masukkan Pesan"> 
-    <input type="number" id="input2" placeholder="Masukkan Kunci">
-    
-    <input type="text" id="outputEnkripsi" readonly placeholder="Hasil Enkripsi">
-    <input type="text" id="outputDeskripsi" readonly placeholder="Hasil Deskripsi">
+        <div class="input-container">
+            <input type="text" id="input1" placeholder="Masukkan Pesan">
+            <input type="number" id="input2" placeholder="Masukkan Kunci">
+        </div>
 
-    <button onclick="enkrip()">
-        Enkripsi 
-    </button>
-    
-    <button onclick="deskrip()">
-        Deskripsi
-    </button>
+        <div class="output-container">
+            <input type="text" id="outputEnkripsi" readonly placeholder="Hasil Enkripsi">
+            <input type="text" id="outputDeskripsi" readonly placeholder="Hasil Deskripsi">
+        </div>
 
-    <button onclick="reset()"> Reset </button>
-
+        <div class="button-container">
+            <button onclick="enkrip()">Enkripsi</button>
+            <button onclick="deskrip()">Deskripsi</button>
+            <button onclick="reset()"> Reset </button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
