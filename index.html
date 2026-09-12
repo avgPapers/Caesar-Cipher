@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caesar Chiper</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Caesar Chiper</h1>
 
-    <input type="text" id="input1">
-    <input type="number" id="input2">
+    <input type="text" id="input1" placeholder="Masukkan Pesan"> 
+    <input type="number" id="input2" placeholder="Masukkan Kunci">
+    
+    <input type="text" id="outputEnkripsi" readonly placeholder="Hasil Enkripsi">
+    <input type="text" id="outputDeskripsi" readonly placeholder="Hasil Deskripsi">
+
     <button onclick="enkrip()">
         Enkripsi 
     </button>
-    <div id="outputEnkripsi"></div>
     
-    <input type="text" id="input3" readonly>
-    <input type="number" id="input4">
     <button onclick="deskrip()">
         Deskripsi
     </button>
-    <div id="outputDeskripsi"></div>
-    
+
     <button onclick="reset()"> Reset </button>
 
     <script src="main.js"></script>

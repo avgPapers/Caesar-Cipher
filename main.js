@@ -32,14 +32,13 @@ function enkrip(){
     
     // Mengirim data enkripsi ke html untuk ditampilkan
     console.log(outputEnkrip);
-    document.getElementById('outputEnkripsi').textContent = outputEnkrip;
-    document.getElementById('input3').value = outputEnkrip;
+    document.getElementById('outputEnkripsi').value = outputEnkrip;
 }
 
 function deskrip(){
     // Mengambil data dari input box 3 & 4
-    text = document.getElementById('input3').value;
-    key = Number(document.getElementById('input4').value) % 26;
+    text = document.getElementById('outputEnkripsi').value;
+    key = Number(document.getElementById('input2').value) % 26;
     
     // Mengubah data karakter dari input 3 menjadi kode ASCII dan disimpan dalam array
     let messages = [];
@@ -70,15 +69,13 @@ function deskrip(){
     
     // Mengirim data enkripsi ke html untuk ditampilkan
     console.log(outputDeskrip);
-    document.getElementById('outputDeskripsi').textContent = outputDeskrip;
+    document.getElementById('outputDeskripsi').value = outputDeskrip;
 }
 
 function reset(){
     // Menghapus element yang ada di html
     document.getElementById("input1").value = "";
     document.getElementById("input2").value = "";
-    document.getElementById("input3").value = "";
-    document.getElementById("input4").value = "";
-    document.getElementById("outputEnkripsi").textContent = "";
-    document.getElementById("outputDeskripsi").textContent = "";
+    document.getElementById("outputEnkripsi").value = "";
+    document.getElementById("outputDeskripsi").value = "";
 }

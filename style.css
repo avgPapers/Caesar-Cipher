@@ -1,3 +1,44 @@
-style{
-    
+body {
+    margin-left: 50px;
+    padding: 40px;
+}
+
+h1 {
+    color: #545454;
+    font-size: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 500px;
+}
+
+input:hover {
+    border-color: #000000;
+}
+
+button {
+    padding: 10px 18px;
+    background-color: #545454;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+    transform: translateY(2px);
+}
+
+div [id="outputDeskripsi"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
